@@ -1,0 +1,36 @@
+@import '../../../main/assets/main.scss';
+
+.offer{
+  padding: $p-xl;
+  background-color: red;
+  width: 25%;
+  .thumbnail_wrapper{
+    background: #eee;
+    border-radius: 1rem;
+    padding-top: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+      .image{
+        transform:  scale(1.05);
+      }
+    }
+    .image{
+      border-radius: 1rem;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: block;
+      left: 0;
+      max-width: 100%;
+      min-width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      transition: 0.5s;
+    }
+  }
+}

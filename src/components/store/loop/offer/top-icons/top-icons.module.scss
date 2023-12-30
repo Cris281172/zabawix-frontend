@@ -1,0 +1,11 @@
+@import '../../../../main/assets/main.scss';
+
+.top_icons{
+  z-index: 2;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: $p-sm;
+}

@@ -1,0 +1,155 @@
+//colors
+$base-color: rgb(255, 184, 0);
+$white-color: #f2f2f2;
+$black-color: #000;
+$red-color: #e82e2e;
+$green-color: #4caf50;
+
+//font weight
+
+$font-weight-xs: 100;
+$font-weight-sm: 300;
+$font-weight-md: 400;
+$font-weight-lg: 500;
+$font-weight-xl: 700;
+$font-weight-xxl: 900;
+
+
+//font-size
+
+$font-xs: 12px;
+$font-sm: 16px;
+$font-md: 20px;
+$font-lg: 24px;
+$font-xl: 28px;
+$font-xxl: 32px;
+
+//padding
+
+$p-xs: 4px;
+$p-sm: 8px;
+$p-md: 12px;
+$p-lg: 16px;
+$p-xl: 22px;
+$p-xxl: 28px;
+
+//margin
+
+$m-xs: 4px;
+$m-sm: 8px;
+$m-md: 12px;
+$m-lg: 16px;
+$m-xl: 22px;
+$m-xxl: 28px;
+
+//class
+
+.container{
+  max-width: 1256px;
+  margin: 0 auto
+}
+
+.btn-primary{
+  cursor: pointer;
+  background-color: $base-color;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: $white-color;
+}
+
+.btn-primary:hover{
+  background: $white-color;
+  border: 1px solid $base-color;
+  color: $base-color;
+}
+
+.btn-outline-primary{
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.3s;
+  border: 1px solid $white-color;
+  border-radius: 20px;
+  color: $white-color;
+}
+.btn-outline-primary:hover{
+  background-color: $white-color;
+  color: $base-color;
+}
+
+.input-wrapper{
+  position: relative;
+  margin: $m-xl 0;
+}
+input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+.input-wrapper .input-typing{
+  border: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid $white-color;
+  background-color: transparent;
+}
+
+.input-wrapper .input-typing:focus{
+  outline:  none;
+}
+
+.input-wrapper .input-typing ~ .focus-border{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 99;
+}
+.input-wrapper .input-typing ~ .focus-border:before,
+.input-wrapper .input-typing ~ .focus-border:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: 0.4s;
+}
+.input-wrapper .input-typing.no-valid ~ .focus-border:before,
+.input-wrapper .input-typing.no-valid ~ .focus-border:after{
+  background: $red-color;
+}
+.input-wrapper .input-typing.valid ~ .focus-border:before,
+.input-wrapper .input-typing.valid ~ .focus-border:after{
+  background-color: $green-color;
+}
+
+.input-wrapper .input-typing ~ .focus-border:after{
+  left: auto;
+  right: 0;
+}
+.input-wrapper .input-typing:focus ~ .focus-border:before,
+.input-wrapper .input-typing:focus ~ .focus-border:after,
+.input-wrapper .has-content.input-typing ~ .focus-border:before,
+.input-wrapper .has-content.input-typing ~ .focus-border:after{
+  width: 50%;
+  transition: 0.4s;
+}
+.input-wrapper .input-typing ~ label{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 9px;
+  color: $white-color;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+}
+.input-wrapper .input-typing:focus ~ label, .has-content.input-typing ~ label{
+  top: -16px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+.input-wrapper .no-valid.input-typing ~ label{
+  color: $red-color;
+}
+.input-wrapper .valid.input-typing ~ label{
+  color: $green-color;
+}

@@ -1,0 +1,20 @@
+@import '../main/assets/main.scss';
+
+.basket{
+  .basket_information_wrapper{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: $m-lg;
+    .basket_icon{
+      color: $base-color;
+      width: 30px;
+      height: 30px;
+      margin-right: $m-sm;
+    }
+    .basket_information{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

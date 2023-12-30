@@ -1,0 +1,15 @@
+@import '../../../main/assets/main.scss';
+
+.top_bar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: $p-md 0;
+  .left_side{
+    display: flex;
+    .top_bar_item{
+      margin-right: $m-md;
+    }
+  }
+}

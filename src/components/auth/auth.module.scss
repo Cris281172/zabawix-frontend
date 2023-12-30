@@ -1,0 +1,16 @@
+@import '../main/assets/main.scss';
+
+.auth{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  .auth_wrapper{
+    background-color: $base-color;
+    padding: $p-xl;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

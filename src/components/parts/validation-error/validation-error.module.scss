@@ -1,0 +1,15 @@
+@import '../../main/assets/main.scss';
+
+.error_message{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+}
+.success{
+  color: $green-color;
+}
+.error{
+  color: $red-color;
+}

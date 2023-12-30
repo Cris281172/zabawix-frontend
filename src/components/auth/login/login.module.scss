@@ -1,0 +1,17 @@
+@import '../../main/assets/main.scss';
+
+.login{
+  .login_button{
+    padding: $p-md 0;
+    width: 100%;
+    font-size: $font-sm;
+  }
+  .no_account{
+    margin-top: $m-lg;
+    color: $white-color;
+    .link{
+      color: $white-color;
+      font-weight: $font-weight-lg;
+    }
+  }
+}

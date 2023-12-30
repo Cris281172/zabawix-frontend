@@ -1,0 +1,35 @@
+@import '../assets/main.scss';
+
+.page_offline{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white-color;
+  z-index: 9999999999;
+  .page_offline_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .page_offline_icon{
+      color: $base-color;
+      width: 95px;
+      height: 95px;
+    }
+    .page_offline_text{
+      font-size: $font-lg;
+      margin: $m-md 0 $m-md 0;
+      .page_offline_offline{
+        font-weight: $font-weight-md;
+      }
+    }
+    .page_offline_refresh{
+      padding: $m-sm $m-lg;
+      font-size: $font-sm;
+    }
+  }
+}

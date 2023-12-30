@@ -1,0 +1,23 @@
+@import '../../../main/assets/main.scss';
+
+.search{
+  width: 100%;
+  margin: 0 $m-xxl;
+  position: relative;
+  .input_search{
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: $p-md 0 $p-md $p-md;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: $font-sm;
+  }
+  .search_icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../main/assets/main.scss';
+
+.main_navigation{
+  background-color: $white-color;
+
+  .main_navigation_content{
+    display: flex;
+    flex-direction: column;
+
+    .top_side{
+      padding: $p-md 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .logo_link{
+        .logo_image{
+          max-width: 120px;
+        }
+      }
+
+      .best_offers{
+        display: flex;
+        align-items: center;
+        margin-right: $m-lg;
+        .best_offers_icon{
+          width: 25px;
+          height: 25px;
+          color: $base-color;
+        }
+        .best_offers_text{
+          white-space: pre;
+          margin-left: $m-xs;
+        }
+      }
+
+    }
+  }
+}

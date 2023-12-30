@@ -1,0 +1,14 @@
+@import '../../../main/assets/main.scss';
+
+.by_price{
+  height: 20px;
+
+}
+.track.track-1{
+  background-color: red !important;
+  height: 2px;
+  .slider_wrapper{
+    height: 20px;
+    position: relative;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../main/assets/main.scss';
+
+.register{
+  .input_wrapper{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  .register_button{
+    padding: $p-md 0;
+    width: 100%;
+    font-size: $font-sm;
+  }
+}
