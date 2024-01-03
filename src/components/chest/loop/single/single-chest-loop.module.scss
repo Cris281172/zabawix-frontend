@@ -1,0 +1,39 @@
+@import '../../../main/assets/main';
+
+.single_chest_loop{
+  padding: $p-lg $p-xxl;
+  border-radius: 20px;
+  border: 2px solid $base-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .image_wrapper{
+    width: 100%;
+    .chest_image{
+      width: 100%;
+    }
+  }
+  .chest_information{
+    margin-top: $m-sm;
+    .chest_name{
+      font-size: $font-lg;
+    }
+    .chest_list{
+      margin-top: $m-md;
+      .chest_item{
+        margin-bottom: $m-xs;
+        &:nth-last-child(1){
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .open_chest{
+    width: 100%;
+    padding: $p-lg 0;
+    font-size: $font-md;
+    display: inline-block;
+    margin-top: $m-lg;
+    text-align: center;
+  }
+}

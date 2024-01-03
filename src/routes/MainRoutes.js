@@ -9,6 +9,8 @@ import Login from "../components/auth/login/Login";
 import Register from "../components/auth/register/Register";
 import ActiveAccount from "../components/auth/active-account/ActiveAccount";
 import AuthRoute from "./AuthRoute";
+import Chest from "../components/chest/Chest";
+import SingleChest from "../components/chest/single/SingleChest";
 
 const LoggedRoutes = () => {
     return(
@@ -18,6 +20,12 @@ const LoggedRoutes = () => {
                 <Route element={<AuthRoute />}>
                     <Route path="/moje-konto" element={<MyAccount />}>
                         <Route path="zmiana-hasla" element="dsa"></Route>
+                    </Route>
+                </Route>
+                <Route path="/skrzynki">
+                    <Route index element={<Chest />} />
+                    <Route element={<AuthRoute />}>
+                        <Route path=":id" element={<SingleChest />}></Route>
                     </Route>
                 </Route>
                 <Route path="/sklep" element={<Store />}>

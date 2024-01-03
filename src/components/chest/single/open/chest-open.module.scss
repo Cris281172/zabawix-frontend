@@ -1,0 +1,53 @@
+@import '../../../main/assets/main';
+
+.chest_open_wrapper{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  .line{
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: rgba($base-color, 0.75);
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+  .chest_open{
+    width: 100%;
+    display: flex;
+    .chest_item_wrapper{
+      flex: 0 0 20%;
+      max-width: 20%;
+      box-sizing: border-box;
+      margin: 0;
+      .chest_item{
+        background: #eee;
+        border-radius: 1rem;
+        padding-top: 100%;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        .chest_item_image{
+          border-radius: 1rem;
+          bottom: 0;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          display: block;
+          left: 0;
+          max-width: 100%;
+          min-width: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+}
+
