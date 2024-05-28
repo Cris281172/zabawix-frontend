@@ -1,0 +1,26 @@
+@import '../../main/assets/main.scss';
+
+.promotion_price{
+  .normal_price_value{
+    position: relative;
+    font-size: $font-md;
+    &:before{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: $base-color;
+      transform: rotate(-20deg) translateY(-50%);
+      top: 50%;
+      left: 0;
+    }
+  }
+  .promotion_price_value{
+    margin-left: $m-xs;
+    font-size: $font-lg;
+    font-weight: $font-weight-md;
+  }
+  .price{
+    font-size: $font-lg;
+  }
+}

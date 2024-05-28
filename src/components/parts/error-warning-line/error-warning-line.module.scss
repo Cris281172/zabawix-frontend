@@ -1,0 +1,17 @@
+@import '../../main/assets/main.scss';
+
+.error_warning_line{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  .error_warning_line_icon{
+    display: block;
+    color: $red-color;
+    cursor: pointer;
+  }
+  .error_warning_line_tooltip{
+    background-color: $red-color;
+    z-index: 999;
+  }
+}

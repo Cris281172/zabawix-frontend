@@ -1,0 +1,14 @@
+@import '../../../main/assets/main';
+
+.chest_content_wrapper{
+  margin: $m-xl 0;
+  .chest_content_text{
+    font-size: $font-md;
+    margin-bottom: $m-md;
+  }
+  .chest_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

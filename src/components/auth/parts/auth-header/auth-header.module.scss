@@ -1,0 +1,20 @@
+@import '../../../main/assets/main.scss';
+
+.auth_header{
+  margin-bottom: $m-lg;
+  .auth_header_title{
+	margin-bottom: $m-sm;
+	font-size: 40px;
+	font-weight: $font-weight-lg;
+	color: $base-color;
+  }
+  .auth_subtitle_wrapper{
+	font-size: $font-md;
+	.auth_action{
+	  cursor: pointer;
+	  margin-left: $m-xs;
+	  text-decoration: underline;
+	  font-weight: $font-weight-md;
+	}
+  }
+}

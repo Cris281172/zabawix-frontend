@@ -1,0 +1,18 @@
+@import '../../main/assets/main.scss';
+
+.tool_bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .tool_bar_left{
+    display: flex;
+    align-items: center;
+    .tool_bar_offers_count{
+      font-size: $font-sm;
+      margin-right: $m-sm;
+    }
+    .tool_bar_more_filters{
+      padding: $p-xs $p-sm;
+    }
+  }
+}

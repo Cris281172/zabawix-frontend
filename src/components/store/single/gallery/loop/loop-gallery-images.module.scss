@@ -1,0 +1,29 @@
+@import '../../../../main/assets/main.scss';
+
+.loop_gallery_images{
+  display: flex;
+  margin-top: $m-md;
+  gap: 8px;
+  overflow: visible;
+  .gallery_image_wrapper{
+    display: block;
+    background: #eee;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    .gallery_image{
+      object-fit: cover;
+      bottom: 0;
+      display: block;
+      left: 0;
+      max-width: 100%;
+      min-width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      cursor: zoom-in;
+    }
+  }
+}

@@ -11,6 +11,17 @@ import ActiveAccount from "../components/auth/active-account/ActiveAccount";
 import AuthRoute from "./AuthRoute";
 import Chest from "../components/chest/Chest";
 import SingleChest from "../components/chest/single/SingleChest";
+import SingleOffer from "../components/store/single/SingleOffer";
+import ChestInformation from "../components/chest/information/ChestInformation";
+import Account from "../components/my-account/account/Account";
+import Settings from "../components/my-account/settings/Settings";
+import Promotions from "../components/my-account/promotions/Promotions";
+import Orders from "../components/my-account/orders/Orders";
+import Order from "../components/order/Order";
+import PrivacyPolicy from "../components/privacy-policy/PrivacyPolicy";
+import TermsOfService from "../components/terms-of-service/TermsOfService";
+import AboutUs from "../components/about-us/AboutUs";
+import Observe from "../components/observe/Observe";
 
 const LoggedRoutes = () => {
     return(
@@ -19,25 +30,28 @@ const LoggedRoutes = () => {
                 <Route index element={<HomePage />} />
                 <Route element={<AuthRoute />}>
                     <Route path="/moje-konto" element={<MyAccount />}>
-                        <Route path="zmiana-hasla" element="dsa"></Route>
+                        <Route path="konto" element={<Account />}></Route>
+                        <Route path="moje-promocje" element={<Promotions />}></Route>
+                        <Route path="zamowienia" element={<Orders />}></Route>
+                        <Route path="ustawienia" element={<Settings />}></Route>
                     </Route>
+                    <Route path="/obserwowane" element={<Observe />}></Route>
                 </Route>
                 <Route path="/skrzynki">
                     <Route index element={<Chest />} />
-                    <Route element={<AuthRoute />}>
-                        <Route path=":id" element={<SingleChest />}></Route>
-                    </Route>
+                    <Route path=":id" element={<SingleChest />}></Route>
+                    <Route path="informacje" element={<ChestInformation />}></Route>
                 </Route>
                 <Route path="/sklep" element={<Store />}>
 
                 </Route>
-            </Route>
+                <Route path="/produkt/:id" element={<SingleOffer />}></Route>
+                <Route path="/zamowienie" element={<Order />}>
 
-            <Route element={<Auth />}>
-                <Route path="/logowanie" element={<Login />}></Route>
-                <Route path="/rejestracja" element={<Register />} />
-                <Route path="/rejestracja/aktywacja-konta" element={<ActiveAccount />} />
-                <Route path="/rejestracja/aktywacja-konta/:id" element={<ActiveAccount />} />
+                </Route>
+                <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />}></Route>
+                <Route path="/regulamin" element={<TermsOfService />}></Route>
+                <Route path="/o-nas" element={<AboutUs />} />
             </Route>
             <Route path="*" element={<NoResults />}></Route>
         </Routes>

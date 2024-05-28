@@ -1,0 +1,34 @@
+@import '../../components/main/assets/main.scss';
+
+.tabs{
+  display: flex;
+  .tabs_content{
+    width: 80%;
+  }
+  .tabs_nav{
+    width: 20%;
+    .tabs_nav_item{
+      transition: 0.5s;
+      border-left: 4px solid transparent;
+      position: relative;
+      left: 0;
+      margin-bottom: $m-sm;
+      &:nth-last-child(1){
+        margin-bottom: 0;
+      }
+      .tabs_nav_item_link{
+        font-size: $font-sm;
+      }
+      &:hover{
+        padding-left: $m-md;
+        border-left: 4px solid $base-color;
+        left: 16px;
+      }
+    }
+    .active{
+      padding-left: $m-md;
+      border-left: 4px solid $base-color;
+      left: 16px;
+    }
+  }
+}

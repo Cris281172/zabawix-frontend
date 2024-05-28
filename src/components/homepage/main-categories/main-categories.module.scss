@@ -1,0 +1,42 @@
+@import '../../main/assets/main';
+
+.main_categories{
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  .main_categories_link{
+    border-radius: 16px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: '';
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.55);
+      height: 100%;
+      top: 0;
+      left:0;
+      border-radius: 16px;
+      transition: 0.3s;
+    }
+    &:hover{
+      &::before{
+        background-color: rgba(0, 0, 0, 0.35);
+      }
+    }
+    .main_categories_image{
+      border-radius: 16px;
+      width: 100%;
+    }
+    .main_categories_title{
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $base-color;
+      font-size: $font-xl;
+      font-weight: $font-weight-xl;
+    }
+  }
+}

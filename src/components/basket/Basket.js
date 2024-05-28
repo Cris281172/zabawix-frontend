@@ -1,40 +1,51 @@
 import styles from "./basket.module.scss";
 import {IoCart} from "react-icons/io5";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import BasketContent from "./BasketContent";
 import deactivateScroll from "../../helpers/deactivateScroll";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchBasket, basket as reduxBasket} from "../../redux/slices/basketSlice";
+import {
+    fetchBasket,
+    basket as reduxBasket,
+    fetchCreateBasket,
+    changeBasketVisible,
+} from "../../redux/slices/basketSlice";
 import Cookies from "js-cookie";
 import {user as reduxUser} from "../../redux/slices/userSlice";
-import useBasketAdd from "../../hooks/useBasketAdd";
+import getSessionID from "../../helpers/session-id/getSessionID";
 
 const Basket = () => {
-
-    const [visibleBasketContent, setVisibleBasketContent] = useState(false)
 
     const dispatch = useDispatch()
 
     const user = useSelector(reduxUser) || {}
 
-    const basket = useSelector(reduxBasket)
+    const basket =  useSelector(reduxBasket)
 
     const userID = user.user ? user.user.id : null
 
     const handleBasketContentActive = () => {
-        setVisibleBasketContent(true)
+        dispatch(changeBasketVisible(true))
         deactivateScroll(true)
     }
 
     const handleBasketContentClose = () => {
-        setVisibleBasketContent(false)
+        dispatch(changeBasketVisible(false))
         deactivateScroll(false)
     }
 
-
     useEffect(() => {
-        if(userID !== null && basket.data.length === 0){
-            dispatch(fetchBasket({tokenCookie: Cookies.get("token"), userID: userID}))
+        if(user.type === 'quest'){
+            dispatch(fetchBasket({tokenCookie: Cookies.get("token") ? Cookies.get("token") : getSessionID(), userID: userID}))
+            if(basket.status === 'rejected'){
+                dispatch(fetchCreateBasket({userID: userID, price: basket.price, basket: basket.data}))
+            }
+        }
+        if(user.type === 'user'){
+            dispatch(fetchBasket({tokenCookie: Cookies.get("token") ? Cookies.get("token") : getSessionID(), userID: userID}))
+            if(basket.status === 'rejected'){
+                dispatch(fetchCreateBasket({userID: userID, price: basket.price, basket: basket.data}))
+            }
         }
     }, [user]);
 
@@ -47,8 +58,7 @@ const Basket = () => {
                     <span>{basket.price} zł</span>
                 </div>
             </div>
-            {visibleBasketContent && <BasketContent basket={basket} handleBasketContentClose={handleBasketContentClose} />}
-
+            <BasketContent basket={basket} handleBasketContentClose={handleBasketContentClose} />
         </div>
     )
 }

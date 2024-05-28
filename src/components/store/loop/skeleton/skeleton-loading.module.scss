@@ -1,0 +1,24 @@
+@import '../../../main/assets/main.scss';
+
+.skeleton_item_wrapper{
+  padding: $p-xl;
+  width: 25%;
+  .skeleton_image{
+    display: flex;
+    border-radius: 1rem;
+    padding-top: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    span{
+      position: absolute;
+      top: 0;
+      height: 100%;
+    }
+  }
+  .skeleton_text{
+    width: 100%;
+    margin-top: $m-md;
+    display: block;
+  }
+}

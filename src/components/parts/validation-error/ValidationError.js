@@ -1,14 +1,24 @@
 import styles from './validation-error.module.scss'
 import { AiOutlineDislike, AiOutlineLike  } from "react-icons/ai";
-const ValidationError = ({additionalClass = "", errorMessage, isErrorVisible, isVisible}) => {
-    if(!isVisible){
-        return <></>
-    }
+import { PiWarningCircle } from "react-icons/pi";
+import { Tooltip } from 'react-tooltip';
+const ValidationError = ({additionalClass = "", errorMessage, isErrorVisible}) => {
     if(!isErrorVisible || !errorMessage){
-        return <AiOutlineLike title={errorMessage} className={`${styles.error_message} ${styles.success}`} />
+        return
     }
     return(
-        <AiOutlineDislike title={errorMessage} className={`${styles.error_message} ${styles.error}`} />
+        <>
+            <a
+                data-tooltip-id={`my-tooltip`}
+                data-tooltip-content={errorMessage}
+                data-tooltip-variant="error"
+                data-tooltip-offset={0}
+            >
+                <PiWarningCircle className={`${styles.error_message} ${styles.error}`} />
+            </a>
+            <Tooltip id={`my-tooltip`} place="top-start" noArrow={true}/>
+
+        </>
     )
 }
 

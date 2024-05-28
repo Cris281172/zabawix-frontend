@@ -1,0 +1,46 @@
+@import '../../../main/assets/main.scss';
+
+.tabs {
+  .tab_item {
+	.tab_button {
+	  width: 100%;
+	  display: flex;
+	  justify-content: space-between;
+	  padding: $p-lg 0;
+	  border-bottom: 1px solid $black-color-20;
+	  background-color: $white-color;
+	  cursor: pointer;
+
+	  .tab_button_text {
+		font-size: $font-xl;
+		font-weight: $font-weight-lg;
+		color: $base-color;
+	  }
+
+	  .tab_button_arrow {
+		transition: 0.5s;
+		font-size: $font-xl;
+		transform: scaleY(-1);
+	  }
+	}
+
+	.tab_content {
+	  max-height: 0;
+	  overflow: hidden;
+	  transition: max-height 0.5s ease, opacity 0.5s ease;
+	}
+  }
+
+  .active {
+	.tab_button {
+	  .tab_button_arrow {
+		transform: scaleY(1);
+	  }
+	}
+
+	.tab_content {
+	  max-height: 1000px;
+	  opacity: 1;
+	}
+  }
+}

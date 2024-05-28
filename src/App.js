@@ -9,29 +9,40 @@ import MainRoutes from "./routes/MainRoutes";
 import {fetchUser, user as reduxUser} from "./redux/slices/userSlice";
 import {useDispatch, useSelector} from "react-redux";
 import PageStatus from "./components/main/page-status/PageStatus";
-import {fetchBasket} from "./redux/slices/basketSlice";
+import setSessionID from "./helpers/session-id/setSessionID";
+import generateRandomID from "./helpers/random-id/generateRandomID";
+import {PopupProvider} from "./components/parts/providers/PopupProvider";
 const App = () => {
     const auth = useAuth();
     const dispatch = useDispatch()
     const user = useSelector(reduxUser)
 
     useEffect(() => {
-        dispatch(fetchUser({tokenCookie: Cookies.get("token")}))
-        if(auth){
-            setInterval(async() => {
-                let newToken = await callToAPI('/refresh-token', "POST", {token: Cookies.get("token")})
+        setSessionID(generateRandomID())
+        dispatch(fetchUser());
+        let intervalId;
+        if (auth) {
+            intervalId = setInterval(async () => {
+                let newToken = await callToAPI('/refresh-token', "POST", { token: Cookies.get("token") });
                 await Cookies.set('token', newToken.token, {
-                    expires: 1/24
-                })
-            }, 1000 * 60 * 5)
-
+                    expires: 1 / 24
+                });
+            }, 1000 * 60 * 5);
         }
-    }, [auth])
+
+        return () => {
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+        };
+    }, [auth]);
 
   return (
     <BrowserRouter>
-        <MainRoutes />
-        <PageStatus user={user} />
+        <PopupProvider>
+            <MainRoutes />
+            <PageStatus user={user} />
+        </PopupProvider>
     </BrowserRouter>
   );
 }

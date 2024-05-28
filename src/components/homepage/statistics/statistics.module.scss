@@ -1,0 +1,34 @@
+@import '../../main/assets/main';
+
+.statistics{
+  background-color: $base-color;
+  margin-top: 70px;
+  padding: $m-xl 0;
+  .statistics_title{
+    text-align: center;
+    color: $white-color;
+    font-size: $font-xxl;
+    font-weight: $font-weight-md;
+  }
+  .statistics_loop_wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: $m-xxl;
+    .statistics_loop_item{
+      align-items: center;
+      flex-direction: column;
+      display: flex;
+      border: 2px solid $white-color;
+      padding: $p-xl;
+      border-radius: 18px;
+      color: $white-color;
+      font-size: $font-md;
+      .statistics_loop_value{
+        margin-bottom: $m-sm;
+        font-size: $font-xxl;
+        font-weight: $font-weight-md;
+      }
+    }
+  }
+}

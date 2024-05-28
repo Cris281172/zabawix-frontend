@@ -1,9 +1,12 @@
 //colors
-$base-color: rgb(255, 184, 0);
+//$base-color: rgb(255, 184, 0);
+$base-color: rgb(255, 136, 0);
 $white-color: #f2f2f2;
-$black-color: #000;
+$black-color: rgb(0, 0, 0);
+$black-color-20: rgb(0, 0, 0, .20);
 $red-color: #e82e2e;
 $green-color: #4caf50;
+$gray-color: #dddd;
 
 //font weight
 
@@ -45,8 +48,13 @@ $m-xxl: 28px;
 //class
 
 .container{
-  max-width: 1256px;
+  max-width: 1280px;
   margin: 0 auto
+}
+@media(max-width: 1550px){
+  .container{
+    margin: 0 20px;
+  }
 }
 
 .btn-primary{
@@ -63,6 +71,14 @@ $m-xxl: 28px;
   border: 1px solid $base-color;
   color: $base-color;
 }
+.btn-primary:disabled{
+  background-color: rgb($base-color, 0.5);
+}
+.btn-primary:disabled:hover{
+  background-color: rgb($base-color, 0.5);
+  color: $white-color;
+  border: 1px solid transparent;
+}
 
 .btn-outline-primary{
   cursor: pointer;
@@ -77,9 +93,23 @@ $m-xxl: 28px;
   color: $base-color;
 }
 
+.btn-outline-secondary{
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.3s;
+  border: 1px solid $base-color;
+  border-radius: 20px;
+  color: $base-color;
+}
+.btn-outline-secondary:hover{
+  background-color: $base-color;
+  color: $white-color;
+}
+
 .input-wrapper{
   position: relative;
   margin: $m-xl 0;
+  z-index: 2;
 }
 input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
 
@@ -127,8 +157,8 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
 }
 .input-wrapper .input-typing:focus ~ .focus-border:before,
 .input-wrapper .input-typing:focus ~ .focus-border:after,
-.input-wrapper .has-content.input-typing ~ .focus-border:before,
-.input-wrapper .has-content.input-typing ~ .focus-border:after{
+.input-wrapper .input-typing ~ .focus-border:before,
+.input-wrapper .input-typing ~ .focus-border:after{
   width: 50%;
   transition: 0.4s;
 }
@@ -153,3 +183,12 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
 .input-wrapper .valid.input-typing ~ label{
   color: $green-color;
 }
+
+.input-wrapper.primary .input-typing{
+  border-color: $base-color;
+}
+.input-wrapper.primary .input-typing ~ label{
+  color: $black-color !important;
+}
+
+

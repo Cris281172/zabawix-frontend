@@ -1,0 +1,24 @@
+@import '../../main/assets/main.scss';
+.active_summary{
+	.active_summary_content{
+	  .content_title{
+		font-size: $font-md;
+		text-decoration: underline;
+	  }
+	  .content_list{
+		margin: $m-lg 0;
+		.content_item{
+		  margin: $m-sm 0;
+		  width: 100%;
+
+		  .content_link{
+			font-size: $font-md;
+			padding: $p-sm 0;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		  }
+		}
+	  }
+	}
+}

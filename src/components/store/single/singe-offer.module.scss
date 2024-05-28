@@ -1,0 +1,17 @@
+@import '../../main/assets/main.scss';
+
+.single_offer{
+  margin-top: $m-xxl;
+  .content{
+    display: flex;
+    .main_content{
+      width: 50%;
+      margin-right: $m-xxl;
+    }
+    .aside_content{
+      position: relative;
+      width: 45%;
+      top: 0;
+    }
+  }
+}

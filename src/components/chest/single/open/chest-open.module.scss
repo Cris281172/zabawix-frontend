@@ -4,7 +4,10 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
   position: relative;
+  animation: opacity_animation 0.5s;
   .line{
     position: absolute;
     width: 20px;
@@ -24,17 +27,13 @@
       margin: 0;
       .chest_item{
         background: #eee;
-        border-radius: 1rem;
         padding-top: 100%;
         overflow: hidden;
         position: relative;
         cursor: pointer;
         .chest_item_image{
-          border-radius: 1rem;
           bottom: 0;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
+          object-fit: cover;
           display: block;
           left: 0;
           max-width: 100%;
@@ -51,3 +50,6 @@
 
 }
 
+.active{
+  opacity: 1;
+}

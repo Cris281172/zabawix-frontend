@@ -1,0 +1,13 @@
+@import '../../../main/assets/main.scss';
+.basket_preview{
+  width: 30%;
+  background-color: $gray-color;
+  border-radius: 4px;
+  padding: $p-md;
+  .basket_preview_title{
+    font-size: $font-md;
+    padding-bottom: $p-xs;
+    margin-bottom: $m-sm;
+    border-bottom: 1px solid $base-color;
+  }
+}

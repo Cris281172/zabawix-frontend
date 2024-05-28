@@ -1,0 +1,9 @@
+@import '../../main/assets/main.scss';
+
+.sort{
+  background-color: $base-color;
+  border: none;
+  color: $white-color;
+  padding: $p-xs $p-md;
+  border-radius: 8px;
+}

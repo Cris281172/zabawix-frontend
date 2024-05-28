@@ -29,7 +29,6 @@ const ActiveAccount = () => {
             callToAPI(`/email-verify/${params.id}`, 'get')
                 .then(res => {
                     setStatus('accept')
-                    console.log(res);
                 })
                 .catch((err) => {
                     setStatus('denied')

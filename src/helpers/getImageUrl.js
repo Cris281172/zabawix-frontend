@@ -1,5 +1,8 @@
-const getImageUrl = (imageUrl) => {
-    const url = 'https://storage.cloud.google.com/zabawix-image/uploads/'
+const getImageUrl = (image) => {
+    if(!image){
+        return null
+    }
+    return `https://storage.googleapis.com/zabawix-storage/uploads/${image}`
 
 }
 

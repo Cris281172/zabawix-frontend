@@ -1,0 +1,28 @@
+@import '../../main/assets/main';
+
+.faq{
+  margin-top: 70px;
+  .faq_title_wrapper{
+    display: flex;
+    justify-content: center;
+    .faq_title{
+      text-align: center;
+      color: $black-color;
+      font-size: $font-xxl;
+      font-weight: $font-weight-md;
+      position: relative;
+      display: inline-block;
+      padding-bottom: $p-sm;
+      &::before
+      {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(255, 184, 0);
+      }
+    }
+  }
+}

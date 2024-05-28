@@ -1,0 +1,86 @@
+@import '../../../main/assets/main.scss';
+
+.offer_gallery {
+  width: 100%;
+
+  .main_image_wrapper {
+    display: block;
+    background: #eee;
+    border-radius: 1rem;
+    padding-top: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    .main_image {
+      object-fit: cover;
+      bottom: 0;
+      display: block;
+      left: 0;
+      max-width: 100%;
+      min-width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      cursor: zoom-in;
+    }
+  }
+
+  .mySwiper2 {
+    .swiper_slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: $m-md;
+      padding-top: 100%;
+      img {
+        object-fit: cover;
+        bottom: 0;
+        display: block;
+        left: 0;
+        max-width: 100%;
+        min-width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        cursor: zoom-in;
+      }
+    }
+  }
+
+  .mySwiper {
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .swiper-slide-thumb-active {
+      img {
+        border: 2px solid #000;
+      }
+    }
+  }
+}
+
+.image_slider{
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+}

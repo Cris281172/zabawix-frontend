@@ -1,0 +1,14 @@
+@import '../../../main/assets/main.scss';
+
+.back_button_wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  .back_button{
+	background: none;
+	border: none;
+	font-size: $font-sm;
+	text-decoration: underline;
+	cursor: pointer;
+  }
+}

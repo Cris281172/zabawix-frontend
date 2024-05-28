@@ -6,7 +6,6 @@ import ChestsLoop from "./loop/ChestsLoop";
 const Chest = () => {
     const dispatch = useDispatch()
     const chest = useSelector(reduxChest)
-    console.log(chest)
     useEffect(() => {
         dispatch(fetchChest())
     }, [])

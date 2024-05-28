@@ -1,0 +1,28 @@
+@import '../../main/assets/main.scss';
+
+.close_button{
+  background-color: #cccccc;
+  border: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  transition: 0.3s;
+  .close_button_icon{
+    color: $white-color;
+    width: 25px;
+    height: 25px;
+    transform: scale(1);
+    transition: 0.3s;
+  }
+  &:hover{
+    transform: rotate(360deg);
+    .close_button_icon{
+      transform: scale(0.75);
+
+    }
+  }
+}

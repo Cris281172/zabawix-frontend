@@ -1,0 +1,12 @@
+@import '../../../main/assets/main.scss';
+
+.similar{
+  margin-top: $m-xxl;
+  .similar_title{
+	font-weight: $font-weight-xl;
+	font-size: $font-xxl;
+  }
+  .similar_offers{
+	margin-top: $m-sm;
+  }
+}

@@ -1,13 +1,34 @@
-import styles from './my-account.module.scss'
-import TopBarTitle from "./top-bar-title/TopBarTitle";
-import Breadcrumbs from "../parts/breadcrumbs/Breadcrumbs";
+import React from 'react';
+import styles from './my-account.module.scss';
+import {Outlet} from 'react-router-dom'
+import MyAccountNav from "./my-account-nav/MyAccountNav";
 const MyAccount = () => {
-    return(
+
+    const myAccountNavConfig = [
+        {
+            key: 'konto',
+            linkText: 'Konto'
+        },
+        {
+            key: 'moje-promocje',
+            linkText: 'Moje promocje'
+        },
+        {
+            key: 'zamowienia',
+            linkText: 'Zamówienia'
+        },
+        {
+            key: 'ustawienia',
+            linkText: 'Ustawienia'
+        }
+    ]
+
+    return (
         <div className={`container ${styles.my_account}`}>
-            <TopBarTitle text={"Dsa"} />
-            <Breadcrumbs />
+            <MyAccountNav config={myAccountNavConfig} />
+            <Outlet />
         </div>
-    )
+    );
 }
 
-export default MyAccount
+export default MyAccount;

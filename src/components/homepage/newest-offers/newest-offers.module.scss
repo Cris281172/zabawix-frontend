@@ -1,0 +1,35 @@
+@import '../../main/assets/main';
+
+.newest_offers{
+  margin-top: 70px;
+  .newest_offers_title_wrapper{
+    display: flex;
+    justify-content: center;
+    margin-bottom: $m-md;
+    .newest_offers_title{
+      text-align: center;
+      color: rgb(0, 0, 0);
+      font-size: $font-xxl;
+      font-weight: $font-weight-md;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 8px;
+      &:before{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(255, 184, 0);
+      }
+    }
+  }
+  .newest_offers_see_more{
+    margin-top: $m-sm;
+    padding: $p-md 0;
+    font-size: $font-md;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,26 +1,18 @@
 import styles from './top-icons.module.scss'
 import {useDispatch, useSelector} from "react-redux";
-import {addProduct} from "../../../../../redux/slices/basketSlice";
 import {user as reduxUser} from '../../../../../redux/slices/userSlice'
+import AddToBasket from "../../../../parts/add-to-basket/AddToBasket";
+import AddToObserve from "../../../../parts/add-to-observe/AddToObserve";
 const TopIcons = ({item}) => {
-    const dispatch = useDispatch()
     const user = useSelector(reduxUser)
-    console.log(user)
-    const data = {
-        userID: user.user ? user.user.id : null,
-        productTitle: item.title,
-        quantity: 1,
-        productID: item._id
-    }
+
     return(
         <div className={styles.top_icons}>
             <div className={styles.left}>
-                <button onClick={() => dispatch(addProduct(data))}>
-                    Dodaj do kosza
-                </button>
+                <AddToBasket item={item} icon={true} />
             </div>
             <div className={styles.right}>
-
+                <AddToObserve item={item} />
             </div>
         </div>
     )

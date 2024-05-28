@@ -1,0 +1,18 @@
+@import '../../../../main/assets/main.scss';
+.parameters{
+  margin-top: $m-xl;
+  .parameters_list{
+	.parameters_item{
+	  margin: $m-sm 0;
+	  font-size: $font-sm;
+	  display: flex;
+	  .parameters_label{
+		width: 30%;
+		font-weight: $font-weight-md;
+	  }
+	  .parameters_format{
+
+	  }
+	}
+  }
+}

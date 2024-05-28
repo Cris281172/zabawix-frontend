@@ -8,10 +8,10 @@ const buildCategoryTree = (categories) => {
 
     for (i = 0; i < categories.length; i += 1) {
         node = categories[i];
-        if (node.parentID !== '0') {
+        if (node.parentID !== '0' && map[node.parentID] !== undefined) {
             categories[map[node.parentID]].subcategories.push(node);
         } else {
-            roots.push(node); 
+            roots.push(node);
         }
     }
     return roots;

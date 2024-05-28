@@ -1,0 +1,29 @@
+@import '../../main/assets/main.scss';
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .change_page{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-sm;
+    margin-right: $m-xs;
+    text-transform: uppercase;
+    .change_page_icon{
+      font-size: 20px;
+    }
+  }
+  .pagination_loop_page{
+    background-color: transparent;
+    border: none;
+    font-size: $font-md;
+    margin-right: $m-sm;
+  }
+  .active{
+    color: $base-color;
+  }
+}

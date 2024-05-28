@@ -1,11 +1,27 @@
 @import '../../main/assets/main.scss';
 
 .login{
+  .authTitle{
+    color: $base-color;
+  }
   .login_button{
     padding: $p-md 0;
     width: 100%;
     font-size: $font-sm;
   }
+  .forgot_button_wrapper{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    .forgot_button{
+      text-decoration: underline;
+      background: none;
+      border: none;
+      color: $base-color;
+      cursor: pointer;
+    }
+  }
+
   .no_account{
     margin-top: $m-lg;
     color: $white-color;

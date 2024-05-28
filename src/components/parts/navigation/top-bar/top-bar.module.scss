@@ -3,13 +3,30 @@
 .top_bar{
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
   padding: $p-md 0;
   .left_side{
     display: flex;
+    align-items: center;
     .top_bar_item{
       margin-right: $m-md;
+      .top_bar_item_link{
+        font-size: $font-sm;
+        font-weight: $font-weight-sm;
+      }
+    }
+    .my_account_button{
+      background: none;
+      border: none;
+      font-size: $font-sm;
+      font-weight: $font-weight-sm;
+      margin-right: $m-md;
+      cursor: pointer;
+    }
+    .logout_user_button{
+      padding: $p-xs $p-sm;
     }
   }
 }

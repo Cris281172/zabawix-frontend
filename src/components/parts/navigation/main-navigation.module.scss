@@ -20,16 +20,16 @@
         }
       }
 
-      .best_offers{
+      .observed{
         display: flex;
         align-items: center;
         margin-right: $m-lg;
-        .best_offers_icon{
+        .observed_icon{
           width: 25px;
           height: 25px;
           color: $base-color;
         }
-        .best_offers_text{
+        .observed_text{
           white-space: pre;
           margin-left: $m-xs;
         }

@@ -17,12 +17,12 @@ const UnLoggedRoutes = () => {
 
                 </Route>
             </Route>
-            <Route element={<Auth />}>
-                <Route path="/logowanie" element={<Login />}></Route>
-                <Route path="/rejestracja" element={<Register />} />
-                <Route path="/rejestracja/aktywacja-konta" element={<ActiveAccount />} />
-                <Route path="/rejestracja/aktywacja-konta/:id" element={<ActiveAccount />} />
-            </Route>
+            {/*<Route element={<Auth />}>*/}
+            {/*    <Route path="/logowanie" element={<Login />}></Route>*/}
+            {/*    <Route path="/rejestracja" element={<Register />} />*/}
+            {/*    <Route path="/rejestracja/aktywacja-konta" element={<ActiveAccount />} />*/}
+            {/*    <Route path="/rejestracja/aktywacja-konta/:id" element={<ActiveAccount />} />*/}
+            {/*</Route>*/}
             <Route path="*" element={<NoResults />}></Route>
         </Routes>
     )

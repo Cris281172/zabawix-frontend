@@ -19,7 +19,8 @@ const Chest = () => {
                         <p className={styles.chest_box_remember}>
                             <strong>Pamiętaj!</strong> Każda skrzynka to niespodzianka – nigdy nie wiesz, jaką promocję przyniesie. Od specjalnych zniżek po ekskluzywne oferty - każda skrzynka to unikalna szansa na wyjątkowe korzyści.
                         </p>
-                        <Link to="" className={`${styles.see_more} btn-outline-primary`}>Poznaj szczegóły!</Link>
+                        <Link to="/skrzynki/informacje" className={`${styles.see_more} btn-outline-primary`}>Poznaj szczegóły!</Link>
+                        <Link to="/skrzynki" className={`${styles.see_more} btn-outline-primary`}>Otwieraj skrzynki</Link>
                     </div>
                 </div>
             </div>

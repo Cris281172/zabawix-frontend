@@ -1,0 +1,6 @@
+const faqConfig = [
+    {
+        question: '',
+        answer: ''
+    }
+]

@@ -5,27 +5,33 @@ import {setFilters, filters as reduxFilters} from "../../../../redux/slices/offe
 import callToAPI from "../../../../api";
 const Category = ({ category }) => {
     const [isExpanded, setIsExpanded] = useState(false);
-    const dispatch = useDispatch()
-    const handleClick = (categoryID, categoryName) => {
-        setIsExpanded(!isExpanded)
-        dispatch(setFilters({prop: "category", value: categoryID}))
-    }
+    const dispatch = useDispatch();
+    const selectedCategoryId = useSelector(state => state.offers.filters.category); // Użyj selektora do pobrania obecnie wybranej kategorii
+
+    const handleClick = (categoryID) => {
+        setIsExpanded(!isExpanded);
+        dispatch(setFilters([{ prop: "category", value: categoryID === selectedCategoryId ? null : categoryID }]));
+    };
+
+    const isActive = category._id === selectedCategoryId;
+    const activeStyle = {
+        color: 'red', // Definiuj styl dla aktywnej kategorii
+        fontWeight: 'bold' // dodatkowy styl
+    };
 
     return (
-        <div style={{ marginLeft: '20px'}}>
-            <div onClick={() => handleClick(category._id, category.categoryName)}>{category.categoryName}</div>
-            {isExpanded && (
-                <>
-                    {category.subcategories && category.subcategories.map(subcategory => (
-                        <Category key={subcategory._id} category={subcategory} />
-                    ))}
-                </>
-            )}
+        <div style={{ marginLeft: '20px' }}>
+            <div onClick={() => handleClick(category._id)} style={isActive ? activeStyle : {}}>
+                {category.categoryName}
+            </div>
+            {isExpanded && category.subcategories && category.subcategories.map(subcategory => (
+                <Category key={subcategory._id} category={subcategory} />
+            ))}
         </div>
     );
 };
-
 const Categories = () => {
+    const filters = useSelector(reduxFilters)
     const [categoriesData, setCategoriesData] = useState([])
     useEffect(() => {
         callToAPI('/categories/get', 'GET')

@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 
 const useBasketAdd = () => {
     const [basketData, setBasketData] = useState(() => {
-        console.log('test');
         if(localStorage.getItem('basket')){
             return JSON.parse(localStorage.getItem('basket'))
         }
@@ -20,9 +19,7 @@ const useBasketAdd = () => {
     }, [basketData]);
 
     const addItemToBasket = (productID, quantity, productPrice, productTitle) => {
-        console.log(basketData)
         setBasketData(prevState => {
-            console.log(prevState);
             return ({price: 0, data: [...prevState.data, {productID: productID, quantity: quantity, productPrice: productPrice, productTitle: productTitle}]})
         })
     }

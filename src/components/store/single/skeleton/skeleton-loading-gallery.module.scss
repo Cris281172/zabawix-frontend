@@ -1,0 +1,13 @@
+.skeleton_item_wrapper{
+  display: flex;
+  border-radius: 1rem;
+  padding-top: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  span{
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+}

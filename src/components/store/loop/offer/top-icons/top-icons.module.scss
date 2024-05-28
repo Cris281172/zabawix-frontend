@@ -8,4 +8,7 @@
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   padding: $p-sm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

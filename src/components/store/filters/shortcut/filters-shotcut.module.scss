@@ -1,0 +1,9 @@
+@import '../../../main/assets/main.scss';
+
+.filters_shortcut{
+  display: flex;
+  margin-bottom: $m-md;
+  .filters_shortcut_reset{
+    padding: $p-xs $p-sm;
+  }
+}

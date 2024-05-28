@@ -1,5 +1,26 @@
 @import '../../main/assets/main';
 
 .single_chest {
-  margin-top: $m-xxl
+  margin-top: $m-xxl;
+  .single_chest_name_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $m-lg;
+    .single_chest_name{
+      font-weight: $font-weight-md;
+      font-size: $font-xxl;
+      padding-bottom: $p-xs;
+      border-bottom: 2px solid $base-color;
+    }
+    .change_volume{
+      margin-left: $m-lg;
+      font-size: 32px;
+    }
+  }
+  .single_chest_open{
+    width: 100%;
+    padding: $p-md 0;
+    font-size: $font-lg;
+  }
 }

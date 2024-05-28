@@ -12,12 +12,19 @@
     border: 1px solid #ccc;
     font-size: $font-sm;
   }
-  .search_icon{
+  .search_button{
     position: absolute;
-    top: 50%;
+    top: 52%;
     transform: translateY(-50%);
-    right: 0;
-    width: 24px;
-    height: 24px;
+    right: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    .search_icon{
+
+      width: 24px;
+      height: 24px;
+    }
   }
+
 }

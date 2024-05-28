@@ -1,40 +1,46 @@
 @import '../../main/assets/main.scss';
 
 .filters_wrapper{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.368627451);
-  left: 0;
-  top: 0;
-  z-index: 2;
+  z-index: 5;
   .filters{
+    z-index: 5;
+    transition: 0.3s ease-in;
     position: fixed;
-    left: 0;
+    left: -100%;
     width: 30%;
     height: 100%;
     top: 0;
     background-color: #fff;
-    animation: filtersAnimation 0.5s;
-    .filters_loop{
-      border-bottom: 1px solid #ccc;
-      padding: $p-md;
-      .filter_title{
-        font-size: $font-sm;
-        text-align: center;
-        font-weight: $font-weight-md;
-        margin-bottom: $m-sm;
+    .close_button_wrapper{
+      position: absolute;
+      right: 8px;
+      top: 8px;
+    }
+    .filters_loop_wrapper{
+      margin-top: $m-xxl;
+      .filters_loop{
+        border-bottom: 1px solid #ccc;
+        padding: $p-md;
+        .filter_title{
+          font-size: $font-sm;
+          text-align: center;
+          font-weight: $font-weight-md;
+          margin-bottom: $m-sm;
+        }
       }
     }
   }
 
 }
 
-@keyframes filtersAnimation {
-  from{
-    width: 0;
-  }
-  to{
-    width: 30%;
+.active{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.368627451);
+  left: 0;
+  top: 0;
+  .filters{
+    left: 0;
   }
 }

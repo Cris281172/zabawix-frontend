@@ -2,9 +2,9 @@
 
 .offer{
   padding: $p-xl;
-  background-color: red;
   width: 25%;
   .thumbnail_wrapper{
+    display: block;
     background: #eee;
     border-radius: 1rem;
     padding-top: 100%;
@@ -32,5 +32,9 @@
       height: 100%;
       transition: 0.5s;
     }
+  }
+  .offer_title{
+    font-size: $font-sm;
+    margin-top: $m-sm;
   }
 }

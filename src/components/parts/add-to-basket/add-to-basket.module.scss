@@ -1,0 +1,23 @@
+@import '../../main/assets/main.scss';
+
+.add_to_basket_icon{
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  .basket_icon{
+    font-size: 16px;
+  }
+}
+
+.add_to_basket_text_icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $p-sm $p-xl;
+  .basket_icon{
+    margin-right: $m-sm;
+    font-size: 20px;
+  }
+}

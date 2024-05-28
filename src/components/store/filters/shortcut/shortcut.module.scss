@@ -1,0 +1,26 @@
+@import '../../../main/assets/main.scss';
+
+.shortcut{
+  background-color: $gray-color;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: $p-xs $p-sm;
+  font-size: $font-xs;
+  margin-left: $m-sm;
+  .shortcut_text{
+    margin-right: $m-xs;
+  }
+  .shortcut_close_button{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: unset;
+    cursor: pointer;
+    .shortcut_close_button_icon{
+      font-size: 16px;
+      color: $base-color;
+    }
+  }
+}

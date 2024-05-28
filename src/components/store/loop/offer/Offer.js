@@ -1,15 +1,42 @@
-import styles from './offer.module.scss'
+import React, { useState } from 'react';
+import styles from './offer.module.scss';
 import TopIcons from "./top-icons/TopIcons";
-const Offer = ({item}) => {
-    return(
+import { Link } from "react-router-dom";
+import Price from "../../../parts/price/Price";
+import getImageUrl from "../../../../helpers/getImageUrl";
+import offerImagePlaceholder from '../../../../images/offer/offer-image-placeholder.png'
+const Offer = ({ item, type }) => {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    const handleImageLoad = () => {
+        setImageLoaded(true);
+    };
+
+    return (
         <div className={styles.offer}>
             <div className={styles.thumbnail_wrapper}>
                 <TopIcons item={item} />
-                <span className={styles.image} style={{backgroundImage: `url('https://storage.cloud.google.com/zabawix-image/uploads/1703711343124_396961546_122117668166061381_9155468782490251989_n-PhotoRoom(1).png?authuser=5')`}}></span>
+                <Link to={`/produkt/${type === 'observe' ? item.productID : item._id}`}>
+                    {imageLoaded ? (
+                        <span className={styles.image} style={{ backgroundImage: `url('${getImageUrl(item.imageName)}')` }}></span>
+                    ) : (
+                        <img src={offerImagePlaceholder} className={styles.image}></img>
+                    )}
+                    <img
+                        src={getImageUrl(item.imageName)}
+                        alt={item.title}
+                        onLoad={handleImageLoad}
+                        style={{ display: 'none' }}
+                    />
+                </Link>
             </div>
-
+            <div>
+                <h2 className={styles.offer_title}>{item.title}</h2>
+                <Price price={item.price} promotionPrice={item.promotionData ? item.promotionData.promotionPrice : null} endsAt={item.promotionData ? item.promotionData.endAt : null} />
+                {item.categoryName}
+            </div>
         </div>
-    )
-}
+    );
+};
 
 export default Offer;
