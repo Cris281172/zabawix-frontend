@@ -1,0 +1,35 @@
+@import '../../../main/assets/main.scss';
+.delivery{
+  .list_wrapper{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	.list_label{
+	  flex-wrap: wrap;
+	  flex-basis: 49%;
+	  align-items: center;
+	  border: 1px solid $black-color-20;
+	  padding: $p-xl;
+	  display: flex;
+	  justify-content: space-between;
+	  .list_label_left{
+		display: flex;
+		align-items: center;
+	  }
+	  .inpost_data_wrapper{
+		margin-top: $m-sm;
+		.inpost_data{
+		  .edit_button{
+			margin-top: $m-md;
+			padding: $p-xs $p-xl;
+			font-size: $font-md;
+		  }
+		}
+	  }
+	}
+	.active{
+	  border: 1px solid $base-color;
+	}
+  }
+}
+

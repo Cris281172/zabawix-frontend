@@ -1,0 +1,11 @@
+.delivery_address{
+  .delivery_address_invoice{
+	display: flex;
+	align-items: center;
+  }
+  .delivery_address_form{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 32px;
+  }
+}

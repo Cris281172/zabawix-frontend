@@ -1,0 +1,18 @@
+@import '../../../main/assets/main.scss';
+
+.billing_details{
+  	.billing_details_invoice{
+	  display: flex;
+	  align-items: center;
+	}
+  .billing_details_saved_address{
+	padding: $p-xs $p-md;
+	margin-top: $m-md;
+	font-size: $font-sm;
+  }
+	.billing_details_form{
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	  gap: 32px;
+	}
+}

@@ -2,7 +2,7 @@ import styles from './relate-offers.module.scss'
 import getImageUrl from "../../../../helpers/getImageUrl";
 import {Link} from "react-router-dom";
 const RelateOffers = ({relatedOffers}) => {
-
+	console.log(relatedOffers)
 	return(
 		<div className={styles.relate_offers_wrapper}>
 			{relatedOffers.map((relate, index) => (

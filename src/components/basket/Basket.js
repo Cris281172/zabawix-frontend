@@ -43,6 +43,7 @@ const Basket = () => {
         }
         if(user.type === 'user'){
             dispatch(fetchBasket({tokenCookie: Cookies.get("token") ? Cookies.get("token") : getSessionID(), userID: userID}))
+            console.log(basket.status)
             if(basket.status === 'rejected'){
                 dispatch(fetchCreateBasket({userID: userID, price: basket.price, basket: basket.data}))
             }

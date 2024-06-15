@@ -1,0 +1,35 @@
+@import '../../../main/assets/main.scss';
+
+.saved_billing_details{
+  padding: $p-xxl;
+  border-radius: 20px;
+  background-color: #fff;
+  position: relative;
+  .close_button_wrapper{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+  .saved_billing_title{
+    margin-top: $m-lg;
+    font-size: $font-md;
+    color: $base-color;
+  }
+  .saved_billing_details_data{
+    .saved_billing_details_data_wrapper{
+      display: flex;
+      margin-top: $m-md;
+      cursor: pointer;
+      .saved_billing_item{
+        padding: $p-md;
+        border-radius: 20px;
+        border: 1px solid $black-color-20;
+        margin-right: $m-md;
+        transition: 0.4s;
+        &:hover{
+          border: 1px solid $base-color;
+        }
+      }
+    }
+  }
+}

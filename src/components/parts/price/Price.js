@@ -5,7 +5,7 @@ const Price = ({price, promotionPrice, endsAt}) => {
         <>
             {promotionPrice && nowDate < new Date(endsAt) ?
                 <p className={styles.promotion_price}>
-                    <span className={styles.normal_price_value}>{price} zł</span> <span className={styles.promotion_price_value}>{promotionPrice} zł</span>
+                    <span className={styles.promotion_price_value}>{promotionPrice} zł</span> <span className={styles.normal_price_value}>{price} zł</span>
                 </p>
                 :
                 <p className={styles.promotion_price}>

@@ -1,0 +1,14 @@
+@import '../../../main/assets/main.scss';
+
+.delivery_address_form{
+  .main_content{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+  }
+  .submit_button{
+	width: 100%;
+	padding: $p-md;
+	font-size: $font-md;
+  }
+}

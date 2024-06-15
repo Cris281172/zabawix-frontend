@@ -1,13 +1,47 @@
 @import '../../../main/assets/main.scss';
 .basket_preview{
-  width: 30%;
-  background-color: $gray-color;
-  border-radius: 4px;
-  padding: $p-md;
-  .basket_preview_title{
-    font-size: $font-md;
-    padding-bottom: $p-xs;
-    margin-bottom: $m-sm;
-    border-bottom: 1px solid $base-color;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 3fr 1fr 1fr;
+  gap: 16px;
+  .header{
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+  }
+  .cell{
+    padding: $p-xl;
+    border-bottom: 1px solid $black-color-20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .quantity{
+      display: flex;
+      height: 100%;
+      align-items: center;
+      font-size: $font-md;
+    }
+    .price_wrapper{
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+    .main_information{
+      display: flex;
+      align-items: center;
+      max-width: 70%;
+      .main_information_image{
+        margin-right: $m-xxl;
+        width: 100px;
+      }
+      .main_information_link{
+        font-size: $font-sm;
+        font-weight: $font-weight-lg;
+      }
+    }
   }
 }
+
+//@media (max-width: 768px) {
+//  grid-template-columns: 1fr;
+//}

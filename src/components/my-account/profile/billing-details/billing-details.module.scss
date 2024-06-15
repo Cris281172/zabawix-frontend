@@ -1,0 +1,20 @@
+@import '../../../main/assets/main.scss';
+
+.billing_details_form{
+  .main_content{
+	margin-top: $m-xxl;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+  }
+  .default_address{
+	display: flex;
+	align-items: center;
+	margin-bottom: $m-md;
+  }
+  .submit_button{
+	width: 100%;
+	padding: $p-md;
+	font-size: $font-md;
+  }
+}

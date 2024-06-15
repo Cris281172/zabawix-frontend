@@ -1,0 +1,44 @@
+@import '../main/assets/main.scss';
+.order{
+  margin-top: $m-md;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: flex-start;
+  .order_form{
+	width: 100%;
+	.order_component{
+	  margin-bottom: $m-xl;
+	  padding: $p-md;
+	  border-radius: 8px;
+	  .order_component_title{
+		font-size: $font-lg;
+		font-weight: $font-weight-xl;
+		margin-bottom: $m-md;
+		display: flex;
+		align-items: center;
+		span{
+		  margin-right: $m-md;
+		  background-color: $base-color;
+		  border-radius: 50%;
+		  width: 30px;
+		  height: 30px;
+		  font-size: $font-md;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  color: $white-color;
+		}
+	  }
+	}
+	.submit_form{
+	  position: fixed;
+	  bottom: 0;
+	  width: 100%;
+	  left: 0;
+	  padding: $p-xl 0;
+	  border-radius: unset;
+	  z-index: 5;
+	}
+  }
+}

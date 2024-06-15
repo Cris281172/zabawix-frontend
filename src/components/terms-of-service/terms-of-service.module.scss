@@ -1,0 +1,32 @@
+@import '../main/assets/main.scss';
+.terms_of_service{
+  user-select: none;
+  margin-top: $m-xl;
+  h1{
+	font-size: $font-xxl;
+	font-weight: $font-weight-xl;
+  }
+  h2{
+	font-size: $font-lg;
+	font-weight: $font-weight-lg;
+	margin-top: $m-xxl;
+  }
+  p{
+	font-size: $font-md;
+	margin: $m-xl 0;
+	letter-spacing: 0.2px;
+	line-height: 22px;
+  }
+  ul{
+	margin-left: $m-md;
+	li{
+	  font-size: $font-md;
+	  margin: $m-xl 0;
+	  letter-spacing: 0.2px;
+	  line-height: 22px;
+	}
+  }
+  strong{
+	font-weight: $font-weight-lg;
+  }
+}

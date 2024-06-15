@@ -1,0 +1,53 @@
+@import '../../main/assets/main.scss';
+
+.edit_profile {
+  margin-bottom: $m-xl;
+  border: 1px solid $base-color;
+  padding: $p-xl;
+  border-radius: 20px;
+  .edit_profile_button {
+	background-color: transparent;
+	width: 100%;
+	padding: $p-sm 0;
+	font-size: $font-md;
+	cursor: pointer;
+  }
+  .edit_profile_preview_section{
+	grid-template-columns: repeat(3, 1fr);
+	display: grid;
+	gap: 50px;
+	.address_index{
+	  font-weight: $font-weight-lg;
+	}
+	.edit_profile_preview_item{
+	  border-right: 2px solid $black-color-20;
+	  padding-right: 50px;
+	  &:nth-last-child(1){
+		border-right: unset;
+	  }
+	  .item_loop_wrapper{
+		margin: $m-xl;
+		.item_loop_item{
+		  margin-bottom: $m-xs;
+		}
+	  }
+	  .edit_profile_preview_actions{
+		display: flex;
+		flex-direction: column;
+		.action_button{
+		  padding: $p-xs 0;
+		  font-size: $font-sm;
+		  margin-top: $m-sm;
+		}
+	  }
+	}
+	.add_new_data{
+	  padding: $p-xxl 0;
+	}
+  }
+  .edit_profile_content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-in-out;
+  }
+}

@@ -1,8 +1,8 @@
 import Cookies from "js-cookie";
 import getSessionID from "./helpers/session-id/getSessionID";
 
-// const BASE_URL = 'http://localhost:8080'
-const BASE_URL = '//16.16.121.201:8080'
+const BASE_URL = 'https://api-zabawix-bca322529e63.herokuapp.com'
+// const BASE_URL = 'https://16.16.121.201:8080'
 
 const callToAPI = async (url, method = 'get', body = null, responseType = 'json') => {
 

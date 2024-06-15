@@ -1,0 +1,21 @@
+@import '../../../main/assets/main.scss';
+.account{
+  .type_email{
+	font-size: $font-md;
+  }
+  .or{
+	font-size: $font-md;
+  }
+  .account_buttons{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: $m-lg;
+
+	.account_button{
+	  flex-basis: 49%;
+	  padding: $p-sm;
+	  font-size: $font-md;
+	}
+  }
+}
